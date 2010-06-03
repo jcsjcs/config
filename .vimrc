@@ -110,7 +110,9 @@ if has("autocmd")
   filetype plugin indent on
 
   "Set thor files to use Ruby syntax
+  "Set rackup files to use Ruby syntax
   au BufNewFile,BufRead  *.thor    set syntax=ruby
+  au BufNewFile,BufRead  *.ru    set syntax=ruby
 
   " Restore cursor position
   autocmd BufReadPost *
