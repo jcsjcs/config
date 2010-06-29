@@ -3,7 +3,8 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+#[ -z "$PS1" ] && return
+if [[ -n $PS1 ]] ; then
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
@@ -91,3 +92,5 @@ export RUBYOPT=rubygems
 export EDITOR=gvim
 CLASSPATH=/usr/share/java/js.jar:/usr/share/java/jline.jar:$CLASSPATH
 export CLASSPATH
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+fi # if not interactive 
