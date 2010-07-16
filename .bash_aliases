@@ -31,9 +31,33 @@ alias ti="ruby_test integration"
 #########
 # RAILS #
 #########
-alias ss='script/server' # start up the beast
-alias sc='script/console' # obvious
-alias a='script/autospec' # makes autotesting even quicker
+# alias ss='script/server' # start up the beast
+# alias sc='script/console' # obvious
+# alias a='script/autospec' # makes autotesting even quicker
+
+# Rails aliases changed to functions so they can work with Rails3 and earlier:
+function ss {
+  if [ -e script/rails ]; then
+    script/rails server $@
+  else
+    script/server $@
+  fi
+}
+function sc {
+  if [ -e script/rails ]; then
+    script/rails console $@
+  else
+    script/console $@
+  fi
+}
+function sg {
+  if [ -e script/rails ]; then
+    script/rails generate $@
+  else
+    script/generate $@
+  fi
+}
+
 
 #############
 # BOOKMARKS #
