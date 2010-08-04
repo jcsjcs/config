@@ -2,13 +2,14 @@
 " STUFF TO REMEMBER
 " -----------------
 " F5 = Strip trailing whitespace from the file
-" .d = Show/Hide NERDTree
+" ,d = Show/Hide NERDTree
 " ,h = Hide search highlights
 " ,k = Toggle display of scratchpad
 " ,w = Show/Hide whitespace characters
 " ,t = FuzzyFinder file search
 " ,u = FuzzyFinder buffer search
 " ,p = Toggle spellcheck on and off
+" ,c = Edit .vimrc in a new tab
 " ----- Open file from same dir as current file:
 " ,ew = Open in this window
 " ,es = Open in split window
@@ -109,6 +110,9 @@ if has("autocmd")
   " Enable filetype detection
   filetype plugin indent on
 
+  " Source the vimrc file after saving it
+  autocmd bufwritepost .vimrc source $MYVIMRC
+
   "Set thor files to use Ruby syntax
   "Set rackup files to use Ruby syntax
   au BufNewFile,BufRead  *.thor    set syntax=ruby
@@ -121,6 +125,9 @@ if has("autocmd")
   \ endif
 
 endif
+
+" Edit .vimrc file
+nmap <leader>c :tabedit $MYVIMRC<CR>
 
 " COLOURSCHEME :
 " For the molokai colourscheme:
@@ -173,6 +180,11 @@ set mat=5         " Bracket blinking.
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
+" Show syntax errors in the status line: (Syntactic plugin)
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
 
 " gvim "specific
 set mousehide  " Hide mouse after chars typed

@@ -5,6 +5,7 @@ alias home='cd ~' # the tilda is too hard to reach
 alias l='ls -lah' # l for list style, a for all including hidden, h for human readable file sizes
 alias h='history' # shortcut for history
 alias c='clear' # shortcut to clear your terminal
+alias lessv='/usr/share/vim/vim72/macros/less.sh' # less via vim - syntax highlighting enabled
 alias ..='cd ..' # move up 1 dir
 alias ...='cd ../..' # move up 2 dirs
 #alias ebash='mate ~/.bash_profile &' # because i edit my bash_profile a lot with new things
