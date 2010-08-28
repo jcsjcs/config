@@ -89,7 +89,7 @@ fi
 #export PATH=$PATH:/var/lib/gems/1.8/bin
 export PATH=$PATH:/var/lib/gems/1.8/bin:/usr/lib/ruby/gems/1.8/gems
 export RUBYOPT=rubygems
-export EDITOR=gvim
+export EDITOR=vim
 CLASSPATH=/usr/share/java/js.jar:/usr/share/java/jline.jar:$CLASSPATH
 export CLASSPATH
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

@@ -33,8 +33,24 @@ if rails_env = ENV['RAILS_ENV']
       ActiveRecord::Base.logger = Logger.new(STDOUT)
     end
   end
+
+  # Helper methods to turn SQL logging on and off:
+  def loud_logger
+    set_logger_to Logger.new(STDOUT)
+  end
+
+  def quiet_logger
+    set_logger_to nil
+  end
+
+  def set_logger_to(logger)
+    ActiveRecord::Base.logger = logger
+    ActiveRecord::Base.clear_active_connections!
+  end
+
   puts '*** Type r! to reload rails.                         ***'
   puts '*** Type [] instead of find. "Tour[21].              ***'
   puts '*** Type log for Rails log in irb. Must be 1st call. ***'
+  puts '*** Type loud_logger/quiet_logger to log SQL in irb. ***'
 
 end

@@ -180,11 +180,13 @@ set mat=5         " Bracket blinking.
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
-" Show syntax errors in the status line: (Syntactic plugin)
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Show syntax errors in the status line: (Syntactic plugin) [[[INTERFERES WITH
+" RAILS ]]]
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
 
 " gvim "specific
 set mousehide  " Hide mouse after chars typed

@@ -65,6 +65,7 @@ function sg {
 #############
 alias bk-tt='cd /home/james/ra/tour_tailor_rails2/'
 alias bk-fp='cd /home/james/ra/forrester_payroll/'
+alias bk-kc='cd /home/james/ra/kromco_mes/'
 
 ###############
 # TOUR TAILOR #
