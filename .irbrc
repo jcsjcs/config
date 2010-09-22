@@ -130,7 +130,8 @@ puts '************** I R B   R E M I N D E R S  **************'
 puts '*** "lp object" for lookup. "Lookup.help" for help.  ***'
 puts '*** "vi" to edit with vim. :q will execute in irb.   ***'
 puts '*** "ap" = Awesome Print. "ap object", "ap Class".   ***'
+puts '*** "conf.echo = false/true" to control feedback.    ***'
 # Load some customizations for Rails console:
-load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV']
+load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && (ENV['RAILS_ENV'] || ENV['_'] =='script/rails')
 #load File.dirname(__FILE__) + '/.merbrc' if $0 == 'irb' && ENV['_'] && ENV['_'] == '/usr/bin/merb'
 puts '********************************************************'

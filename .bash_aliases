@@ -16,6 +16,10 @@ alias panel_left='gconftool-2 --set "/apps/panel/toplevels/top_panel_screen0/mon
 alias panel_right='gconftool-2 --set "/apps/panel/toplevels/top_panel_screen0/monitor" --type integer "0"; gconftool-2 --set "/apps/panel/toplevels/bottom_panel_screen0/monitor" --type integer "0"'
 alias nz='echo The date and time right now in New Zealand is : `TZ=Pacific/Auckland date`.'
 
+function grepedi {
+    grep -inr --colour --exclude-dir=edi/doc --exclude-dir=edi/logs $@ edi/*
+}
+
 ########
 # RUBY #
 ########
