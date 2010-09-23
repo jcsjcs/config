@@ -5,6 +5,16 @@ require 'interactive_editor' # Open vim with the vi command. On :q the contents 
 require 'looksee/shortcuts'  # Examine lookup path of objects. To use: 'lp object'. Help: 'Looksee.help'.
 require 'ap'                 # AwesomePrint - call with 'ap object'. For ActiveRecord: 'ap object, :indent => -2' to left-align attributes.
                              # For ActiveRecord, 'ap ActiveRecordClass' will list the attributes and their types.
+# Note: For Rails 3 apps, include the following in the Gemfile:
+# For Rails Console
+# group :development do
+#   gem "wirble"
+#   gem "awesome_print"
+#   gem "looksee"
+#   gem "interactive_editor"
+#   #gem RUBY_VERSION.include?('1.9') ? 'ruby-debug19' : 'ruby-debug'
+# end
+# 
 
 # start wirble (with color)
 Wirble.init
@@ -132,6 +142,7 @@ puts '*** "vi" to edit with vim. :q will execute in irb.   ***'
 puts '*** "ap" = Awesome Print. "ap object", "ap Class".   ***'
 puts '*** "conf.echo = false/true" to control feedback.    ***'
 # Load some customizations for Rails console:
-load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && (ENV['RAILS_ENV'] || ENV['_'] =='script/rails')
+load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV']
+load File.dirname(__FILE__) + '/.railsrc' if $0 == 'script/rails' && (!Rails.env.nil? )
 #load File.dirname(__FILE__) + '/.merbrc' if $0 == 'irb' && ENV['_'] && ENV['_'] == '/usr/bin/merb'
 puts '********************************************************'

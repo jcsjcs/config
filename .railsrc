@@ -1,5 +1,5 @@
 # Rails-specific tweaks for irb:
-if rails_env = ENV['RAILS_ENV']
+if rails_env = ENV['RAILS_ENV'] || !Rails.env.nil?
   rails_root = File.basename(Dir.pwd)
  
   rails_env_string = case rails_env
