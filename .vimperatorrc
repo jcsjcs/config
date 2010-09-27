@@ -1,0 +1,8 @@
+" devwiki abbreviation in commandline
+ca dwk file:///home/james/dobackup/dev-wiki.html
+ca hnr http://www.helderbergnaturereserve.co.za/
+ca blog http://breachofpremise.wordpress.com/
+ca tt http://www.tourtailor.co.za/
+
+" Bookmarks shortcut command
+com bm dia bookmarks
