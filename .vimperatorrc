@@ -3,6 +3,8 @@ ca dwk file:///home/james/dobackup/dev-wiki.html
 ca hnr http://www.helderbergnaturereserve.co.za/
 ca blog http://breachofpremise.wordpress.com/
 ca tt http://www.tourtailor.co.za/
+ca mail http://msg.do.co.za/
+ca mojo http://ubb.mojo4music.com/ubbthreads.php?Cat=&C=1
 
 " Bookmarks shortcut command
 com bm dia bookmarks
