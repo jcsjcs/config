@@ -20,6 +20,19 @@ function grepedi {
     grep -inr --colour --exclude-dir=edi/doc --exclude-dir=edi/logs $@ edi/*
 }
 
+alias ack='ack-grep'
+function ackrb {
+    ack-grep --ruby $@
+}
+function ackrails {
+    ack-grep --ruby $@ app lib
+}
+function ackjs {
+    ack-grep --js $@
+}
+
+alias yuimin='java -jar /home/james/download/javascripts/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
+
 ########
 # RUBY #
 ########
@@ -36,6 +49,7 @@ alias ti="ruby_test integration"
 #########
 # RAILS #
 #########
+alias passre='touch tmp/restart.txt' # restart app served by passenger
 # alias ss='script/server' # start up the beast
 # alias sc='script/console' # obvious
 # alias a='script/autospec' # makes autotesting even quicker
@@ -68,8 +82,8 @@ function sg {
 # BOOKMARKS #
 #############
 alias bk-tt='cd /home/james/ra/tour_tailor_rails2/'
-alias bk-fp='cd /home/james/ra/forrester_payroll/'
 alias bk-kc='cd /home/james/ra/kromco_mes/'
+alias bk-cm='cd /home/james/ra/jmt_cms/; rvm 1.9.2'
 
 ###############
 # TOUR TAILOR #
@@ -106,3 +120,7 @@ alias crap='cd /home/james/shoes/ashbb-code_wrapper_on_shoes04; shoes CWoS_v0.4b
 ############
 alias hgit='git --git-dir=$HOME/.homegit --work-tree=$HOME'
 
+###########
+# OPENVPN #
+###########
+alias vpnkromco='sudo openvpn --config /etc/openvpn/client.conf'

@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'wirble'             # colourise irb
 require 'interactive_editor' # Open vim with the vi command. On :q the contents run within irb.
-require 'looksee/shortcuts'  # Examine lookup path of objects. To use: 'lp object'. Help: 'Looksee.help'.
+#require 'looksee/shortcuts'  # Examine lookup path of objects. To use: 'lp object'. Help: 'Looksee.help'.
 require 'ap'                 # AwesomePrint - call with 'ap object'. For ActiveRecord: 'ap object, :indent => -2' to left-align attributes.
                              # For ActiveRecord, 'ap ActiveRecordClass' will list the attributes and their types.
 # Note: For Rails 3 apps, include the following in the Gemfile:
